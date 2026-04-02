@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Index Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Heat Index Calculator</h1>
+        
+        <!-- CALCULATOR SECTION ON TOP -->
+        <div class="input-section">
+            <div class="input-group">
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" placeholder="Enter temperature" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="humidity">Humidity (%):</label>
+                <input type="number" id="humidity" placeholder="Enter humidity" min="0" max="100" step="0.1">
+            </div>
+            <button class="btn-calculate">Calculate Heat Index</button>
+        </div>
+
+        <!-- RESULT SECTION BELOW CALCULATOR -->
+        <div class="result-section" id="resultSection" style="display:none;">
+            <div class="result-box" id="resultBox">
+                <p class="result-label">Heat Index:</p>
+                <p class="result-value" id="resultValue">--°C</p>
+                <p class="result-warning" id="resultWarning"></p>
+            </div>
+        </div>
+
+        <!-- DESCRIPTION SECTIONS STYLED AS BLOCKS -->
+        <div class="description-section">
+            <div class="description-block">
+                <h2>Apa itu Heat Index?</h2>
+                <p>Heat Index (Juga dikenal sebagai suhu nyata) adalah suhu sebenarnya yang dirasakan oleh tubuh manusia ketika kelembapan relatif dikombinasikan dengan suhu udara.</p>
+            </div>
+
+            <div class="description-block">
+                <h2>Bagaimana cara menghitung Heat Index?</h2>
+                <p>Dalam kalkulasi Heat Index, perubahan yang signifikan pada suhu udara baru akan muncul pada suhu <strong>minimal 27°C</strong> dan kelembapan udara <strong>minimal 40%</strong></p>
+            </div>
+
+            <div class="description-block">
+                <h2>Cara Penggunaan:</h2>
+                <p>Masukan nilai suhu udara kedalam kolom "Temperature (°C):" dan kelembapan relatif ke dalam kolom "Humidity (%)"</p>
+            </div>
+
+            <div class="description-block">
+                <h2>Warning Table:</h2>
+                <ul class="warning-list">
+                    <li><span class="warning-safe">Aman:</span> &lt; 27°C — Tidak ada resiko heatstroke.</li>
+                    <li><span class="warning-caution">Peringatan:</span> 27–32°C — Kemungkinan kecil terjadi kelelahan dan heat cramp bila melakukan aktivitas berat.</li>
+                    <li><span class="warning-alert">Waspada:</span> 32–41°C — Kemungkinan besar terjadi kelelahan dan heat cramp.</li>
+                    <li><span class="warning-danger">Bahaya:</span> 41–54°C — Kemungkinan terjadi heatstroke bila terlalu lama terekspos.</li>
+                    <li><span class="warning-critical">Ancaman:</span> ≥ 54°C — Heat stroke akan terjadi tanpa perlindungan!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
