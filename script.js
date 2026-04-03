@@ -1,8 +1,3 @@
-// ─────────────────────────────────────────
-//  SHAPE — evolving AI companion
-//  script.js (FIXED)
-// ─────────────────────────────────────────
-
 const TRAITS = [
   { key: "openness",     label: "Openness",     color: "#7f77dd" },
   { key: "optimism",     label: "Optimism",     color: "#1d9e75" },
