@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shape — An AI that evolves with you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <header>
+      <div class="header-left">
+        <span class="logo-mark">◈</span>
+        <span class="logo-text">shape</span>
+      </div>
+      <button id="resetBtn" title="Reset AI">↺ reset</button>
+    </header>
+
+    <main>
+      <section class="profile-panel">
+        <div class="avatar-ring" id="avatarRing">
+          <div class="avatar" id="avatar">🌱</div>
+        </div>
+        <div class="profile-info">
+          <h1 id="aiName">Unnamed</h1>
+          <p id="aiTagline">Just waking up... shape me by chatting.</p>
+        </div>
+        <div class="meta-tags" id="metaTags">
+          <span class="tag" id="tagWorldview">neutral</span>
+          <span class="tag" id="tagIdeology">undefined</span>
+          <span class="tag" id="tagPersonality">blank slate</span>
+        </div>
+      </section>
+
+      <section class="traits-panel">
+        <div class="traits-grid" id="traitsGrid"></div>
+      </section>
+
+      <section class="chat-panel">
+        <div class="messages" id="messages">
+          <div class="msg ai" id="welcomeMsg">
+            <div class="msg-avatar">🌱</div>
+            <div class="msg-bubble">Hello. I am a blank slate. Talk to me — shape what I become.</div>
+          </div>
+        </div>
+        <div class="evo-log" id="evoLog"></div>
+        <div class="input-row">
+          <input type="text" id="userInput" placeholder="Say anything to shape this mind..." autocomplete="off" />
+          <button id="sendBtn">↗</button>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
